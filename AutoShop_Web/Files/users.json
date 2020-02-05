@@ -1,0 +1,41 @@
+[
+    {
+        "id": "797E64DF-9739-4554-A7C7-2588401BE003",
+        "email": "setrui.rcm@gmail.com",
+        "lastName": "Sturm",
+        "firstName": "Eric",
+        "picture": "SturmEric.jfif",
+        "level": 25,
+        "experience": 200000
+    },
+    {
+        "id": "E35DE6D9-378C-4DE7-BC04-463FE11ED5E0",
+        "email": "fred@aisense.fr",
+        "lastName": "Wickert",
+        "firstName": "Fred",
+        "picture": "DD.jfif",
+        "level": 40,
+        "experience": 150000,
+        "badge": { "title": "Over archivement" }
+    },
+    {
+        "id": "749AE6C3-7858-4A8D-92FE-896030CBCB6A",
+        "email": "ff.ff@ff.ff",
+        "lastName": "ff",
+        "firstName": "FF",
+        "picture": "FF.jpg",
+        "level": 50,
+        "experience": 35000000,
+        "badge": { "title": "Gost" }
+    },
+    {
+        "id": "13FB9045-F869-48CA-9B94-EA7B3635B2D3",
+        "email": "gg.gg@gg.gg",
+        "lastName": "gg",
+        "firstName": "GG",
+        "picture": "GG.jpg",
+        "level": 100,
+        "experience": 42949672,
+        "badge": { "title": "Hardware Buyer" }
+    }
+]

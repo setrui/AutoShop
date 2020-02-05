@@ -1,0 +1,24 @@
+[
+    {
+        "id": "badge1",
+        "partitionKey": "Badges",
+        "title": "Over archivement",
+        "picture": "overArchivement.png",
+        "label": "You bought 10x more than usual this last week !!"
+    },
+    {
+        "id": "badge2",
+        "partitionKey": "Badges",
+        "title": "Gost",
+        "picture": "gost.png",
+        "label": "long time not seen your moron ! è_é"
+
+    },
+    {
+        "id": "badge3",
+        "partitionKey": "Badges",
+        "title": "Hardware Buyer",
+        "picture": "hardwareBuyer.png",
+        "label": "What are you gonna do with all these cards ?"
+    }
+]

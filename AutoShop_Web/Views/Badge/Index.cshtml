@@ -1,0 +1,23 @@
+﻿@model List<Badge>;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Badges</h1>
+<br />
+<div class="row">
+    <ul class="list-group">
+        @foreach (Badge item in Model)
+        {
+            <li>
+
+                <h4>@item.Title</h4>
+                <div>
+                    <img class="img-fluid" height="128" width="128" src="~/picture/badge/@item.Picture" />
+                    @item.Label
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+

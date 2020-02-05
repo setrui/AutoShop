@@ -1,0 +1,60 @@
+﻿@model List<User>
+@{
+    ViewData["Title"] = "Index";
+    int maxLevel = 50;
+    uint maxExeperience = 4000000;
+}
+
+<h1>Utilisateurs</h1>
+<br />
+<div class="row">
+    <div class="card-deck">
+        @foreach (User item in Model)
+        {
+            int level = (int)(item.Level * 100 / maxLevel);
+            int experience = (int)(item.Experience * 100 / maxExeperience);
+
+
+        <div class="card bg-dark text-center text-light">
+            <div class="card-title ">@item.Email</div>
+            <div class="card-body">
+                <div class="card-img"><img class="img-fluid" src="~/picture/user/@item.Picture" /></div>
+                <div class="card-title">
+                    @item.LastName
+                    <br />@item.FirstName
+                    <br />
+                    <br />
+                    LVL @item.Level
+
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width:@level%" aria-valuenow="@item.Level" aria-valuemin="0" aria-valuemax="@maxLevel.ToString("N0")"></div>
+                        <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width:100%"></div>
+                    </div>
+                    <br />
+                    <br />
+                    XP @item.Experience
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width:@experience%" aria-valuenow="@item.Experience" aria-valuemin="0" aria-valuemax="@maxExeperience.ToString("N0")"></div>
+                        <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width:100%"></div>
+                    </div>
+                    <div>
+                        @if(item.ActiveBadge != null)
+                    {
+                        <img class="img-fluid" height="128" width="128" src="~/picture/badge/@item.ActiveBadge.Picture" />
+                        @item.ActiveBadge.Title <br />
+                        @item.ActiveBadge.Label
+                    }
+                    </div>
+                    </div>
+
+
+                <div class="card-footer float-right">
+                    <button class="btn btn-primary " typeof="button">Upload</button>
+                    @Html.ActionLink("Detail", "Details", new { id = item.Id },new{@class = "btn btn-danger float-right mr-2"})
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
